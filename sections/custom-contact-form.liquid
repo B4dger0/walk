@@ -1,0 +1,55 @@
+{% schema %}
+    {
+      "name": "Contact Form",
+      "tag": "section",
+      "settings": [],
+      "presets": [
+        {
+          "name": "Contact Form"
+        }
+      ]
+    }
+    {% endschema %}
+    
+    <div class="custom-contact-form">
+      <form method="post" action="/contact">
+        <label for="email">Email:</label>
+        <input type="email" name="contact[email]" id="email" required>
+    
+        <label for="phone">Phone Number:</label>
+        <input type="tel" name="contact[phone]" id="phone" required>
+    
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    
+    <style>
+      .custom-contact-form {
+        max-width: 400px;
+        margin: auto;
+      }
+    
+      .custom-contact-form label {
+        display: block;
+        margin-top: 10px;
+      }
+    
+      .custom-contact-form input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+    
+      .custom-contact-form button {
+        margin-top: 15px;
+        padding: 10px;
+        width: 100%;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+    
